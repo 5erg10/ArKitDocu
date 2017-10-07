@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<head>
+    <title>Apple arKit</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="favicon.ico">  
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
+    
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+</head> 
+
+<body class="body-red">
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="">
+                            <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                            <span class="text-highlight">Apple arKit</span><span class="text-bold">Docs</span>
+                        </a>
+                    </h1>
+                </div><!--//branding-->
+                <ol class="breadcrumb">
+                    <li><a href="">Home</a></li>
+                    <li class="active">Tutorial & Docs</li>
+                </ol>
+            </div><!--//container-->
+        </header><!--//header-->
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><i class="icon fa fa-paper-plane"></i> Tutorial & Docs </h1>
+                    <div class="meta"><i class="fa fa-clock-o"></i> 16/07/2017</div>
+                </div><!--//doc-header-->
+                <div class="doc-body">
+                    <div class="doc-content">
+                        <div class="content-inner">
+                            <section id="Getstarted-section" class="doc-section">
+                                <h2 class="section-title">arKit</h2>
+                                <div class="section-block">
+                                    <p>Arkit es la nueva libreria de realidad aumentada liberada para el desarrollo por Apple y de la que ya hemos hecho algun prototipo para testar rendimiento, capacidades y funcionalidades.</p> 
+                                     <div class="row">
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <h6>Primeras pruebas con nuestro "museo en la calle"</h6>
+                                            <!-- 16:9 aspect ratio -->
+                                            <div class="embed-responsive embed-responsive-16by9">
+                                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ixE57JQ0JW4?autoplay=1" frameborder="0" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                    </div><!--//row-->
+                                    <p></p>
+                                    <p>Esta nueva libreria consigue una alta precision en el posicionamiento y tracking de los elementos basandose en dos tecnologias:</p> 
+                                    <p><b>Vision artificial:</b> gracias a la tecnologia de vision artificial es capaz a traves de la camara del movil de detectar en el entorno superficio¡es horizontales (mesas, suelo...) sobre los que permite ubicar los modelos en realidad aumentada.</p>
+                                    <p>En principio solo permite ubicar los modelos en superficies horizontales y con orientacion obviamente horizontal. Esto supone una limitacion si existen casos en los que nos interesase ubicarlos en planos verticales (colgando de una pared, por ejemplo).</p>
+                                    <p><b>VIO (visual inertial odometry):</b></p>
+                                    <p>En cuanto al posicionamiento, utilizan de una forma muy inteligente tecnicas muy antiguas. El llamado <b>visual inertial odometry</b> en pocas palabras consiste en analizar la imagen en busca de aristas que le sirvan de referencia para seguir su movimiento, de esta forma el dispositivo sabe en que direccion se ha producido el movimiento y en que medida. </p>
+                                    <p>Este sistema ofrece una gran precision pero tiene un problema, que es el efecto <i>Blur</i> de las camaras. Cuando se mueve la cámara muy rapido la imagen se distorsiona y las aristas se difuminan, y si el dispositivo pierde durante más de dos frames esas aristas, pierde la referencia. Por eso este sistema lo han combinado con la informacion obtenida de los propios giroscopio y acelerometro del móvil, que tambien es una técnica ya anticuada pero que en este caso funciona muy bien al estar especificamente calibrado para el particular de sus dispositivos. </p>
+                                </div>
+                                <p></p>
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/1A237_3cfcw?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                                 <p></p>
+                                <p><i>Ejemplo de como funciona el sistema VIO.</i></p>
+                                <p></p>
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/z7DYC_zbZCM?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                                <p></p>
+                                <p><i>Sistema de medición de entornos reales utilizando AR.</i></p>
+                                <p></p>
+                            </section><!--//doc-section-->
+                            <section id="navegacion-section" class="doc-section">
+                                <h2 class="section-title">Requisitos</h2>
+                                <div id="ios"  class="section-block">
+                                    <h3 class="block-title">IOS 11 beta</h3>
+                                    <p>La nueva libreria de Apple precisa de un dispositivo que monte los nuevos chipset X9 o X10 para poder funcionar, estos son los dispositivos a dia de hoy que disponen de ese chipset y por lo tanto son compatibles:
+                                    </p>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <h6>Dispositivos compatibles:</h6>
+                                            <ul class="list">
+                                                <li>Iphone 6s.</li>
+                                                <li>Iphone 6s plus.</li>
+                                                <li>Iphone 7 y 7plus.</li>
+                                                <li>Ipad Pro 2017.</li>
+                                            </ul>
+                                        </div>
+                                    </div><!--//row-->
+                                    <p>Si tu dispositivo Apple cumple con las especificaciones, necesitas descargar <a href="https://developer.apple.com/download/" target="_blanck"> <b>aqui</b></a> la actualización de IOS 11 Beta, si tu ID de Apple no es de desarrollador no te aparecera en la lista de descargas.
+                                    </p>
+                                </div><!--//section-block-->
+                                <div id="xcode"  class="section-block">
+                                    <h3 class="block-title">Xcode9Beta2</h3>
+                                    <p>Para poder desarrollar un proyecto basado en ArKit necesitareis tambien instalar la Beta 9 de Xcode, que podeis instalar desde <a href="https://developer.apple.com/download/" target="_blanck"><b>aqui</b></a>. Por suerte en este caso no es necesaria la ID de desarrollador para poder descargarlo e instalarlo..
+                                    </p>
+                                    <!--<div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                                        </ol>
+                                        <div class="carousel-inner">
+                                          <div class="item active">
+                                            <img src="assets/images/.png" alt="Los Angeles">
+                                          </div>
+                                          <div class="item">
+                                            <img src="assets/images/.png" alt="Chicago">
+                                          </div>
+                                          <div class="item">
+                                            <img src="assets/images/.png" alt="New York">
+                                          </div>
+                                        </div>
+                                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                          <span class="glyphicon glyphicon-chevron-left"></span>
+                                          <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                          <span class="glyphicon glyphicon-chevron-right"></span>
+                                          <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>-->
+                                </div><!--//section-block-->
+                                <div id="unity"  class="section-block">
+                                    <h3 class="block-title">Unity 5.6.1p2</h3>
+                                    <p>Solo es compatible con ArKit las versiones de Unity iguales o superiores a la 5.6, aunque de momento recomiendan en especifico la <a href="https://store.unity.com/download?ref=personal" target="_blanck"><b>version 5.6.1p1</b></a>.
+                                    </p>
+                                </div><!--//section-block-->
+                                <div id="arkit"  class="section-block">
+                                    <h3 class="block-title">ArKit SDK</h3>
+                                    <p>Se puede descargar o bien desde el propio <a href="https://www.assetstore.unity3d.com/en/#!/content/92515" target="_blanck"><b>Asset Store</b></a> de Unity o directamente desde la seccion <a>developer de Apple</a>.
+                                    </p>
+                            </section><!--//doc-section-->
+                             <section id="basico-section" class="doc-section">
+                                <img class="img-responsive" src="assets/images/mapBox.png" alt="elegant icons">
+                                <div id="basico"  class="section-block">
+                                    <h3 class="block-title">Escena básica</h3>
+                                    <ol class="list">
+                                        <li>
+                                            <p>Descargar <i>Unity ArKit Plugin</i> desde el Asset Store.</p>
+                                            <p></p>
+                                                <img class="img-responsive" style="max-width: 60%;" src="assets/images/unityAsset.png" alt="elegant icons">
+                                            <p></p>
+                                            <p><i>Se recomienda importarlo en un proyecto nuevo porque ya es proyecto completo en si y borrará cualquier modificacion hecha hasta entonces. </i></p>    
+                                        </li>
+                                        <li>
+                                            <p>Con la escena vacia, hay que añadir a la camara principal los componentes <i>"Unity AR video"</i>, que se encarga de controlar y manejar los datos del VIO y los sensores, y <i>"Unity AR camera Near Far"</i> con el que se controla el Fov de la cámara en el entorno virtual.</p> 
+                                            <p></p>
+                                             <img class="img-responsive" style="max-width: 60%;" src="assets/images/arCamera.png" alt="elegant icons">
+                                            <p></p>
+                                            <p><i>Estos componentes no vienen con parametros de configuracion. Si en algún caso concreto interesa cambiar alguna de las variables por defecto, hay que hacerlo directamente sobre el Script.</i></p>
+                                        </li>
+                                        <li>
+                                            <p>Añadir a la escena un objeto vacio, añadirle el componente <i>"Unity AR Camera Manager"</i>. Este componente necesita como parametro indicarle cual es la camara principal.</p>
+                                            <p></p>
+                                            <img class="img-responsive" style="max-width: 60%;" src="assets/images/arempty.png" alt="elegant icons">
+                                            <p></p>
+                                            <p><i>Este componente se encarga de comunicarle a los objetos de la escena los datos recogidos por la cámara.</i></p> 
+                                        </li>
+                                        <li>
+                                            <p>Añadir un nuevo objeto vacío en la escena, que servira de contenedor a todos aquellos modelos 3D que luego vayamos a insertar en el "mundo real".</p> 
+                                        </li>
+                                        <li>
+                                            <p>Añadimos el modelo que querámos dentro del objeto vacio creado anteriormente y le añadimos el componente <i>"Unity AR Hit Test Example"</i>. Este componente necesita un <i>gameObject</i> como parametro, que sera el propio padre que usamos como contenedor y nos sirve para poder ubicar el modelo en el entorno real.</p>
+                                            <p></p> 
+                                            <img class="img-responsive" style="max-width: 60%;" src="assets/images/arobject.png" alt="elegant icons">
+                                        </li>
+                                        <li>
+                                            <p>Con esto tenemos una escenar básica con arKit en el que podemos encender la cámara, y fijar el modelo e un punto que toquemos en la pantalla. pero hay que tener en cuenta algunas consideraciones:</p> 
+                                            <ul class="list">
+                                                <li>Todos los objetos, tanto la camara como el objeto padre o los objetos hijos dentro de el, se recomienda que partan del punto <i>(0, 0, 0)</i> para facilitarle los calculos de posicionamiento al VIO.</li>
+                                                <li>Si quieres redimensionar el modelo 3D, siempre hay que hacerlo redimensionando el propio modelo desde un programa de modelado externo para que padre e hijo dentro de Unity mantengan la proporcion <i>(0.1, 0.1, 0.1)</i> y <i>(1, 1, 1)</i> respectivamente.</li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                </div><!--//section-block-->
+                                <div id="hit"  class="section-block">
+                                    <h3 class="block-title">Hit Controller</h3>
+                                    <p>Aunque en el tutorial previo ya se explica como añadir este componente al modelo para luego poder ubicarlo en el entorno, cabe estenderse sobre el para hablar de una serie de consideraciones.
+                                    </p>
+                                    <p>Como ya comentamos, este componente nos sirve para que al tocar la pantalla del dispositivo, el modelo virtual se quede fijado en el plano horizontal que haya detectado en el area en la que hemos tocado y asi, una vez fijado, podamos ya arcercarnos a el o redearlo y que se mantenga en su sitio. 
+                                    </p>
+                                    <p>El problema con este componente es que "acapara" todos los eventos touch en pantalla. Lo que quiere decir que si quisiesemos, por ejemplo, tener un menu en pantalla con botones con los que interactuar, al pulsar uno de esos botones el componente entendera que estamos queriendo reubicar el modelo, y resulta un poco incomodo. 
+                                    </p>
+                                    <p></p>
+                                    <img class="img-responsive" style="max-width: 60%;" src="assets/images/menuExample.png" alt="elegant icons">
+                                    <p></p>
+                                    <p>En la imagen, se ve como tenemos un menu con el que queremos interactuar sin que el componente entienda que tambien estamos queriendo reubicar el modelo, y para eso tenemos que introducir algunos cambios en el propio script del componente <i>"Unity AR Hit Test Example"</i>.
+                                    </p>
+                                     <pre><code class="language-javascript">
+using System;
+using System.Collections.Generic;
+using UnityEngine.EventSystems;
+
+namespace UnityEngine.XR.iOS
+{
+    public class UnityARHitTestExample : MonoBehaviour
+    {
+        public Transform m_HitTransform;
+
+        bool HitTestWithResultType (ARPoint point, ARHitTestResultType resultTypes)
+        {
+            List<ARHitTestResult> hitResults = UnityARSessionNativeInterface.GetARSessionNativeInterface ().HitTest (point, resultTypes);
+            if (hitResults.Count > 0) {
+                foreach (var hitResult in hitResults) {
+                    Debug.Log ("Got hit!");
+                    m_HitTransform.position = UnityARMatrixOps.GetPosition (hitResult.worldTransform);
+                    m_HitTransform.rotation = UnityARMatrixOps.GetRotation (hitResult.worldTransform);
+                    Debug.Log (string.Format ("x:{0:0.######} y:{1:0.######} z:{2:0.######}", m_HitTransform.position.x, m_HitTransform.position.y, m_HitTransform.position.z));
+                    return true;
+                }
+            }
+            return false;
+        }
+        
+        // Update is called once per frame
+        void Update () {
+            if (Input.touchCount > 0 && m_HitTransform != null)
+            {
+                var touch = Input.GetTouch(0);
+                if (touch.phase == TouchPhase.Began && !EventSystem.current.IsPointerOverGameObject(0))
+                {
+                    var screenPosition = Camera.main.ScreenToViewportPoint(touch.position);
+                    ARPoint point = new ARPoint {
+                        x = screenPosition.x,
+                        y = screenPosition.y
+                    };
+
+                    // prioritize reults types
+                    ARHitTestResultType[] resultTypes = {
+                        ARHitTestResultType.ARHitTestResultTypeExistingPlaneUsingExtent, 
+                        // if you want to use infinite planes use this:
+                        //ARHitTestResultType.ARHitTestResultTypeExistingPlane,
+                        ARHitTestResultType.ARHitTestResultTypeHorizontalPlane, 
+                        ARHitTestResultType.ARHitTestResultTypeFeaturePoint
+                    }; 
+                    
+                    foreach (ARHitTestResultType resultType in resultTypes)
+                    {
+                        if (HitTestWithResultType (point, resultType))
+                        {
+                            return;
+                        }
+                    }
+                }
+            }
+        }
+
+    
+    }
+}
+                                        </code></pre>
+                                    <p> </p>    
+                                    <p>Aqui os dejo el Script ya modificado. Básicamente he añadido una excepción al evento <i>touch.phase == TouchPhase.Began</i> de la funcion <i>Update()</i> para indicar que solo debe ejecutarse en caso de que en la zona de la pantalla que estemos tocando no haya ya un elemento introducido por nosotros (<i>!EventSystem.current.IsPointerOverGameObject(0)</i>).
+                                    </p>
+                                </div><!--//section-block-->
+                                <div id="shadow"  class="section-block">
+                                    <h3 class="block-title">Shadow Plane</h3>
+                                    <p>Por defecto, los modelos no proyectan sombras en el entorno real, un recurso que mejora considerablemente la integracion. Pero <i>ARKit</i> dispone de un componente con el que poder añadir este efecto.
+                                    </p>
+                                    <p>Para recurrir a el, simplemente hay que añadir un objeto vacio a la escena, y a este añadirle el componente <i>"Unity AR Generate Plane"</i>.Este componente recibe como parametro un <i>gameObject</i> que segun lo que deseemos puede servir para calcular el <i>ambient occlusion</i>, para generar un plano Debug que te informa de las superficies horizontales que esta detectando, etc.</p>
+                                    <p>En este caso lo que nos interesa es generar sombras por lo que le pasaremos el Prefab <i>ShadowPlanePrefab</i> que el arKit ya tiene preparado para este propósito.</p>
+                                    <p> </p>
+                                    <img class="img-responsive" style="max-width: 60%;" src="assets/images/shadow.png" alt="elegant icons">
+                                    <p> </p>
+
+                                    <p><i>hay que tener en cuenta que la escena solo acepta un componente <i>"Unity AR Generate Plane"</i> dedicado a generacion de elementos, por lo que si ponemos varios solo se hará efectivo el primero en la jerarquia.</i></p>
+                                </div><!--//section-block
+                                <div id="animator"  class="section-block">
+                                    <h3 class="block-title">Object Animator</h3>
+                                    <p>Loren <a><b>Ipsun</b></a>.
+                                    </p>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+                             <section id="arkit-mapbox" class="doc-section">
+                                <h2 class="section-title">ArKit + MapBox</h2>
+                                <div id="instalacion"  class="section-block">
+                                    <h3 class="block-title">Instalación y requisitos</h3>
+                                    <p>El SDK de MapBox se descarga directamente desde la pagina oficial de MapBox. Una vez descargado se importa en nuestro proyecto como un <i>new package</i> y podremos observar que en la barra de Menu superior nos ha aparecido la opción <i>MapBox</i>.
+                                    </p>
+                                    <p> </p>
+                                    <img class="img-responsive" style="max-width: 60%;" src="assets/images/mapboxConf.png" alt="elegant icons">
+                                    <p> </p>
+                                    <p>Si pulsamos sobre <i>Configure Acces</i> nos abrira el cuadro de dialogo donde debemos introducir el <i>Acces Token</i> que MapBox nos facilita cuando nos damos de alta en su sistema.
+                                    </p>
+                                </div><!--//section-block-->
+                                <div id="basicomap"  class="section-block">
+                                    <h3 class="block-title">Mapa básico</h3>
+                                     <ol class="list">
+                                        <li>
+                                            <p>Lo primero que hay que hacer es crear nuestro visualizador de mapas. Para ello vamos a crear una carpeta vacia en <i> Project </i> donde luego crearemos todos los componentes que necesitemos.</p>
+                                            <p></p>
+                                                <img class="img-responsive" style="max-width: 60%;" src="assets/images/cityMapEmpty.png" alt="elegant icons">
+                                            <p></p>
+                                            <p>Como hemos dicho, en este directorio vacio es donde crearemos todos los componentes de nuestro mapa, y el primero de ellos es el <i>MapVisualization</i>, asi que dentro de la carpeta hacemos <b>click derecho > Create > MapBox > MapVisualization</b>.</p>
+                                            <p></p>
+                                                <img class="img-responsive" style="max-width: 60%;" src="assets/images/createMapVisualization.png" alt="elegant icons">
+                                            <p></p>
+                                            <p><i>Despues de instalar el SDK de MapBox y haber configurado correctamente el Acces Token, se puede observar como ha aparecido la opcion MabBox en el menu contextual Create. Si no apareciese quiere decir que la instalacion no fue correcta.</i></p>    
+                                        </li>
+                                        <li>
+                                            <p>
+                                                <i>MapVisualization</i> hace las veces de "controlador" de todas las <i>Factories</i> que vayamos creando. Y la primera que necesitamos es una que nos genere el terreno sobre el que se va a pintar el mapa. Asi que dentro de la carpeta <i>CityMap</i> creamos una nueva carpeta que llamaremos <i>CityTerrain</i> y dentro de esta a su vez crearemos el componente <i>Terrain Factory</i>.
+                                            </p>    
+                                            <p></p>
+                                                <img class="img-responsive" style="max-width: 60%;" src="assets/images/terrainFactory.png" alt="elegant icons">
+                                            <p></p>
+                                            <p><i>Este Factory necesita una serie de parametros de configuracion, pero de momento lo dejaremos todo por defecto excepto que activaremos la casilla Add Collider y como opcional, podemos inyectarle un material a nuestro gusto, porque el material por defecto tiene demasiados brillos.</i></p>   
+                                            <p></p>
+                                                <img class="img-responsive" style="max-width: 60%;" src="assets/images/cityTerrainConf.png" alt="elegant icons">
+                                            <p></p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                Una vez tenemos el terreno, necesitamos la textura del mapa para impromirlo sobre este, para ello, comom hicimos con el <i>MapTerrain</i> crearemos una nueva carpeta dentro de <i>CityMap</i> a la que llamaremos <i>CityImagery</i> y dentro de esta a su vez crearemos un <i>Map Image Factory</i>.
+                                            </p>    
+                                            <p></p>
+                                                <img class="img-responsive" style="max-width: 60%;" src="assets/images/mapImagery.png" alt="elegant icons">
+                                            <p></p>
+                                            <p>Este Factory necesita una serie de parametros de configuracion, pero de momento solo cambiaremos el parametro "Style", con el que elegiremos la estetica de nuestro mapa</p>   
+                                            <p></p>
+                                                <img class="img-responsive" style="max-width: 60%;" src="assets/images/mapImageryConf.png" alt="elegant icons">
+                                            <p></p>
+                                        </li> 
+                                        <li>
+                                            <p>
+                                                Con estos componentes creados, los inyectaremos en nuesto <i>MapVisualizer</i> para que se encarge de gestionarlo. para ello seleccionamos el componente y en el inspector le indicamos que nuestro "controller" manejara dos <i>Factory</i>.
+                                            </p>  
+                                            <p>
+                                                 Al hacerlo se nos ampliara la lista con dos lineas que esperan dos componentes como parametro y aqui le añadiremos a cada linea nuestros componentes <i>CityTerrain</i> y <i>CityImagery</i> que acabamos de crear. Evidentemente, con cada <i>Factory</i> nuevo que creemos, añadiremos en <i>MapVisualizer</i> una nueva linea para integrarlo si nos interesa.
+                                            </p>   
+                                            <p></p>
+                                                <img class="img-responsive" style="max-width: 60%;" src="assets/images/mapvisualizerconf.png" alt="elegant icons">
+                                            <p></p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                una vez todos los <i>Factory</i> creados y configurados,  ya podemos generar en la escena un mapa sencillo, por lo que vamos a incluirlo para probarlo. Para ello creamos un objeto vacio en la escena que llamaremos <i>Map</i> y le añadiremos el componente <i>"Abstract Map"</i> y  <i>"Range Tile Provider"</i>.
+                                            </p>    
+                                            <p></p>
+                                                <img class="img-responsive" style="max-width: 60%;" src="assets/images/mapScene.png" alt="elegant icons">
+                                            <p></p>
+                                            <p>En el componente <i>RangeTileProvider</i>, simplemente indicaremos que queremos un map con las proporciones todas a 1.</p> 
+                                            <p>En el componente <i>AbstractMap</i>, le pasaremos las coordenadas del mapa que deseamos, el zoom inicial de ese mapa y las opciones Tile Provider y Map visualizer esperan objetos como parametros.</p>  
+                                            <p>En <i>TileProvider</i>, arrastraremos hasta su casilla el propio componente <i>"Range Tile Provider"</i>.</p>    
+                                            <p>En <i>Mapvisualizer</i>, seleccionaremos el componente MapVisualizer que hemos estado creando y configurando hasta ahora.</p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                ¡Ya esta listo!, ahora solo hay que darle al <i>Play</i> asegurandonos de que el mapa entre dentro del campo de visión de la cámara y confirmar que esta todo correcto.
+                                            </p>    
+                                            <p></p>
+                                                <img class="img-responsive" style="max-width: 60%;" src="assets/images/mapResult.png" alt="elegant icons">
+                                            <p></p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                Ahora que sabemos que funciona y queremos integrarlo con <i>ARKit</i>, solo tenemos que meter en escena nuestro objeto de la misma manera que se explico en la <a class="scrollto" href="#basico">Escena básica</a> de <i>ARKit</i>, como si fuese un modelo 3D habitual.
+                                            </p> 
+                                        </li>
+                                     </ol>   
+                                </div><!--//section-block-->
+                                <div id="meshmap"  class="section-block">
+                                    <h3 class="block-title">Mesh Generator</h3>
+                                    <p>proximamente</a>.
+                                    </p>
+                                </div><!--//section-block-->
+                                <div id="stylesmap"  class="section-block">
+                                    <h3 class="block-title">Estilos</h3>
+                                    <p>proximamente</b></a>.
+                                    </p>
+                                </div><!--//section-block-->
+                                <div id="inputmap"  class="section-block">
+                                    <h3 class="block-title">Input Data Map</h3>
+                                    <p>proximamente</b></a>.
+                                    </p>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+                        </div><!--//content-inner-->
+                    </div><!--//doc-content-->
+                    <div class="doc-sidebar hidden-xs">
+                        <nav id="doc-nav">
+                            <ul id="doc-menu" class="nav doc-menu" data-spy="affix">
+                                <li><a class="scrollto" href="#Getstarted-section">Get started</a></li>
+                                <li>
+                                    <a class="scrollto" href="#navegacion-section">Requisitos</a>
+                                    <ul class="nav doc-sub-menu">
+                                        <li><a class="scrollto" href="#ios">Instalacion IOS 11</a></li>
+                                        <li><a class="scrollto" href="#xcode">Instalacion Xcode9Beta2</a></li>
+                                        <li><a class="scrollto" href="#unity">Instalacion Unity 5.6.1p2</a></li>
+                                        <li><a class="scrollto" href="#arkit">Instalacion arKit Unity SDK</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="scrollto" href="#basico-section">Tutorial básico</a>
+                                    <ul class="nav doc-sub-menu">
+                                        <li><a class="scrollto" href="#basico">Escena básica</a></li>
+                                        <li><a class="scrollto" href="#hit">Hit controller</a></li>
+                                        <li><a class="scrollto" href="#shadow">Shadow plane</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="scrollto" href="#arkit-mapbox">ArKit + MapBox</a>
+                                    <ul class="nav doc-sub-menu">
+                                        <li><a class="scrollto" href="#instalacion">Instalacion y requisitos</a></li>
+                                        <li><a class="scrollto" href="#basicomap">Mapa básico</a></li>
+                                        <li><a class="scrollto" href="#meshmap">Mesh generator</a></li>
+                                        <li><a class="scrollto" href="#stylesmap">Estilos</a></li>
+                                        <li><a class="scrollto" href="#inputmap">Input datos Json</a></li>
+                                    </ul>
+                                </li>
+                            </ul><!--//doc-menu-->
+                        </nav>
+                    </div><!--//doc-sidebar-->
+                </div><!--//doc-body-->              
+            </div><!--//container-->
+        </div><!--//doc-wrapper-->
+    </div><!--//page-wrapper-->
+    
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">Designed by <a href="https://www.youtube.com/watch?v=WosrUnjb2UQ" target="_blank">Scary BigPeach</a> for developers</small>
+            
+        </div><!--//container-->
+    </footer><!--//footer-->
+    
+     
+    <!-- Main Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>                                                                
+    <script type="text/javascript" src="assets/plugins/jquery-match-height/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    
+</body>
+</html> 
+
